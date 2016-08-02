@@ -1,0 +1,2 @@
+# CodinGames
+solution for codeingames
