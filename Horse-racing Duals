@@ -1,0 +1,22 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+    int N;
+    cin >> N; cin.ignore();
+    int P [N];
+    for (int i = 0; i < N; i++) {
+        cin >> P[i]; cin.ignore();
+    }
+
+    sort(P, P + N);
+    
+    int diff = P[1] - P[0];
+    for(int i = 0; i < N - 1; i++) {
+    	diff = min(diff, P[i+1] - P[i]);
+    }
+    cout << diff << endl;
+}
